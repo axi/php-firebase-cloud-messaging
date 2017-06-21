@@ -240,4 +240,18 @@ class Message implements \JsonSerializable
         }
         return null;
     }
+
+    /**
+     * usefull for sending same message to other recipients
+     */
+    public function clearRecipients() {
+    	$this->recipients = array();
+    }
+
+    /**
+     * @return \sngrl\PhpFirebaseCloudMessaging\Notification
+     */
+    public function getNotification() {
+    	return $this->notification;
+    }
 }
