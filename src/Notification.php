@@ -87,28 +87,28 @@ class Notification extends Message
     public function jsonSerialize()
     {
         $jsonData = $this->getJsonData();
-        if ($this->title) {
+        if (isset($this->title)) {
             $jsonData['title'] = $this->title;
         }
-        if ($this->body) {
+        if (isset($this->body)) {
             $jsonData['body'] = $this->body;
         }
-        if ($this->badge) {
+        if (isset($this->badge)) {
             $jsonData['badge'] = $this->badge;
         }
-        if ($this->icon) {
+        if (isset($this->icon)) {
             $jsonData['icon'] = $this->icon;
         }
-        if ($this->clickAction) {
+        if (isset($this->clickAction)) {
             $jsonData['click_action'] = $this->clickAction;
         }
-        if ($this->sound) {
+        if (isset($this->sound)) {
             $jsonData['sound'] = $this->sound;
         }
-        if ($this->tag) {
+        if (isset($this->tag)) {
             $jsonData['tag'] = $this->tag;
         }
-        if ($this->content_available) {
+        if (isset($this->content_available)) {
             $jsonData['content_available'] = $this->content_available;
         }        
         return $jsonData;
